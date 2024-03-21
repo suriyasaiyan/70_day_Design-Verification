@@ -63,7 +63,7 @@ class driver;
         this.vif =vif;
     endfunction
 
-    task reset(input int duration = reset_duration); //Have to set a DEFAULT VALUE 
+    task reset(input int duration = 10); //Have to set a DEFAULT VALUE 
         vif.rst =1'b1;
         #(duration) vif.rst =1'b0;
     endtask
